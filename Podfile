@@ -7,5 +7,7 @@ target 'PolancoSnapchat' do
 
   # Pods for PolancoSnapchat
   pod 'FirebaseAuth'
+  pod 'FirebaseStorage'
+  pod 'FirebaseDatabase'
 
 end
