@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>515124270773-ou1l21kasij3noejjm3kq550ihf07vmm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.515124270773-ou1l21kasij3noejjm3kq550ihf07vmm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBSyxmis7dm4HOkTlyYIo3QN0bCK-HGH2I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>515124270773</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>empresa.PolancoSnapchat</string>
+	<key>PROJECT_ID</key>
+	<string>polancosnapchat</string>
+	<key>STORAGE_BUCKET</key>
+	<string>polancosnapchat.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:515124270773:ios:2efc54f3b2f5fac31350fc</string>
+</dict>
+</plist>
