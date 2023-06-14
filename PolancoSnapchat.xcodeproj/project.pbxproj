@@ -12,6 +12,8 @@
 		7F7678102A311F9500A11EBF /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76780F2A311F9500A11EBF /* ElegirUsuarioViewController.swift */; };
 		7F7678142A31287700A11EBF /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7678132A31287700A11EBF /* Usuario.swift */; };
 		7F7D760A2A3A1A81005B035D /* crearUsuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D76092A3A1A81005B035D /* crearUsuarioController.swift */; };
+		7F7D760C2A3A2D90005B035D /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D760B2A3A2D90005B035D /* Snap.swift */; };
+		7F7D760E2A3A38D1005B035D /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D760D2A3A38D1005B035D /* VerSnapViewController.swift */; };
 		7FC6E5E52A30DE0B00F8DFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6E5E42A30DE0B00F8DFEA /* AppDelegate.swift */; };
 		7FC6E5E72A30DE0B00F8DFEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6E5E62A30DE0B00F8DFEA /* SceneDelegate.swift */; };
 		7FC6E5E92A30DE0B00F8DFEA /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6E5E82A30DE0B00F8DFEA /* iniciarSesionViewController.swift */; };
@@ -31,6 +33,8 @@
 		7F76780F2A311F9500A11EBF /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
 		7F7678132A31287700A11EBF /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		7F7D76092A3A1A81005B035D /* crearUsuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crearUsuarioController.swift; sourceTree = "<group>"; };
+		7F7D760B2A3A2D90005B035D /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		7F7D760D2A3A38D1005B035D /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 		7FC6E5E12A30DE0B00F8DFEA /* PolancoSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolancoSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC6E5E42A30DE0B00F8DFEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FC6E5E62A30DE0B00F8DFEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				7F76780D2A3106FE00A11EBF /* ImagenViewController.swift */,
 				7F76780F2A311F9500A11EBF /* ElegirUsuarioViewController.swift */,
 				7F76780B2A30FDFC00A11EBF /* SnapsViewController.swift */,
+				7F7D760D2A3A38D1005B035D /* VerSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7F7678132A31287700A11EBF /* Usuario.swift */,
+				7F7D760B2A3A2D90005B035D /* Snap.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -247,7 +253,9 @@
 			files = (
 				7F7D760A2A3A1A81005B035D /* crearUsuarioController.swift in Sources */,
 				7F76780C2A30FDFC00A11EBF /* SnapsViewController.swift in Sources */,
+				7F7D760C2A3A2D90005B035D /* Snap.swift in Sources */,
 				7F76780E2A3106FE00A11EBF /* ImagenViewController.swift in Sources */,
+				7F7D760E2A3A38D1005B035D /* VerSnapViewController.swift in Sources */,
 				7F7678142A31287700A11EBF /* Usuario.swift in Sources */,
 				7FC6E5E92A30DE0B00F8DFEA /* iniciarSesionViewController.swift in Sources */,
 				7FC6E5E52A30DE0B00F8DFEA /* AppDelegate.swift in Sources */,

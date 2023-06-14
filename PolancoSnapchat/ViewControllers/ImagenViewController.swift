@@ -4,8 +4,6 @@
 //
 //  Created by Fabricio on 7/06/23.
 //
-
-
 import UIKit
 import FirebaseStorage
 
@@ -32,13 +30,9 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate,  
         imagePicker.dismiss(animated: true,completion: nil )
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let imagenesFolder = Storage.storage().reference().child("imagenes")
-        let imagenData = imageView.image?.jpegData(compressionQuality: 0.50)
-        imagenesFolder.child("imagenes.jpg").putData(imagenData!, metadata: nil) { (metadata, error) in
-            if error != nil{
-                print("Ocurrio un error al subir una imagen: \(error)")
-            }
-        }
+        let siguienteVC = segue.destination as!  ElegirUsuarioViewController
+        siguienteVC.imagenURL = sender as! String
+        siguienteVC.descrip = descripcionTextField.text!
     }
     func mostrarAlerta(titulo: String, mensaje: String , accion: String){
         let alerta = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
@@ -56,16 +50,27 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate,  
         self.elegirContactoBoton.isEnabled = false
                let imagenesFolder = Storage.storage().reference().child("imagenes")
                let imagenData = imageView.image?.jpegData(compressionQuality: 0.50)
-               let cargarImagen = imagenesFolder.child("\(NSUUID().uuidString).jpg").putData(imagenData!, metadata: nil)
+               let cargarImagen = imagenesFolder.child("\(NSUUID().uuidString).jpg")
+            cargarImagen.putData(imagenData!, metadata: nil)
                { (metadata, error ) in
                    if error != nil {
                        self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al subir la imagen verifica tu internet", accion: "Aceptar")
                        self.elegirContactoBoton.isEnabled = true
                        print("A ocurrido un error al subir la imagen: \(error)")
+                       return
                    }else{
-                       self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: nil )
+                       cargarImagen.downloadURL(completion: {(url, error) in
+                           guard let enlaceURL = url else{
+                               self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al obtener informacion de la imagen", accion: "Cancelar")
+                               self.elegirContactoBoton.isEnabled = true
+                               print("Ocurrio un error al obtener la informacion de la imagen \(error)")
+                               return
+                           }
+                           self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: url?.absoluteString)
+                       })
                    }
     }
+        /*
         let alertaCarga = UIAlertController(title: "Cargando imagen ...", message: "0%", preferredStyle: .alert)
                 let progresocCarga: UIProgressView = UIProgressView(progressViewStyle: .default)
                 cargarImagen.observe(.progress) {(snapshot) in
@@ -83,6 +88,7 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate,  
                 alertaCarga.addAction(btnOK)
                 alertaCarga.view.addSubview(progresocCarga)
                 present(alertaCarga, animated: true, completion: nil)
+         */
                 
             }
 }
