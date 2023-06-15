@@ -74,6 +74,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-e1-mGU">
                                 <rect key="frame" x="0.0" y="177" width="414" height="220"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYn-Fq-KJx">
+                                <rect key="frame" x="160" y="418" width="95" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reproducir"/>
+                                <connections>
+                                    <action selector="reproducir:" destination="Ng5-rD-wkZ" eventType="touchUpInside" id="DS7-Xo-kEh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Gd-Mr-yY6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,6 +108,7 @@
         <!--ENVIAR MENSAJE-->
         <scene sceneID="aBh-9O-K3s">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBu-1x-pSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="wjJ-zR-uam" customClass="ImagenViewController" customModule="PolancoSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8uK-qF-ttB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -127,6 +137,33 @@
                                     <action selector="elegirContactoTapped:" destination="wjJ-zR-uam" eventType="touchUpInside" id="0H7-wR-Zvq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-it-L44">
+                                <rect key="frame" x="173" y="369" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Grabar"/>
+                                <connections>
+                                    <action selector="grabarTapped:" destination="wjJ-zR-uam" eventType="touchUpInside" id="2jN-vc-X51"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-KB-8nf">
+                                <rect key="frame" x="159" y="433" width="95" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reproducir"/>
+                                <connections>
+                                    <action selector="reproducirTapped:" destination="wjJ-zR-uam" eventType="touchUpInside" id="Syw-iw-tDW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-zc-46x">
+                                <rect key="frame" x="87" y="508" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1i-6c-2Yg">
+                                <rect key="frame" x="0.0" y="568" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2ho-gd-pWX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,9 +171,15 @@
                             <constraint firstItem="axj-eC-f7J" firstAttribute="centerX" secondItem="8uK-qF-ttB" secondAttribute="centerX" id="0jC-Z7-gtq"/>
                             <constraint firstItem="axj-eC-f7J" firstAttribute="top" secondItem="2ho-gd-pWX" secondAttribute="top" constant="20" id="3Cx-dz-vgo"/>
                             <constraint firstItem="kPU-FA-9JC" firstAttribute="top" secondItem="axj-eC-f7J" secondAttribute="bottom" constant="15" id="4G3-q8-Rd0"/>
+                            <constraint firstItem="FpH-it-L44" firstAttribute="top" secondItem="0Vn-KO-6X8" secondAttribute="bottom" constant="65" id="4w8-Yx-9tA"/>
+                            <constraint firstItem="2ho-gd-pWX" firstAttribute="trailing" secondItem="r1i-6c-2Yg" secondAttribute="trailing" id="ChT-q6-6CF"/>
+                            <constraint firstItem="zEp-KB-8nf" firstAttribute="top" secondItem="FpH-it-L44" secondAttribute="bottom" constant="33" id="NOB-3f-ecq"/>
+                            <constraint firstItem="r1i-6c-2Yg" firstAttribute="leading" secondItem="2ho-gd-pWX" secondAttribute="leading" id="gHL-rk-FhS"/>
                             <constraint firstItem="0Vn-KO-6X8" firstAttribute="centerX" secondItem="8uK-qF-ttB" secondAttribute="centerX" id="gba-KZ-4Qv"/>
+                            <constraint firstItem="rfj-zc-46x" firstAttribute="top" secondItem="0Vn-KO-6X8" secondAttribute="bottom" constant="204" id="jsH-WC-UqL"/>
                             <constraint firstItem="kPU-FA-9JC" firstAttribute="leading" secondItem="0Vn-KO-6X8" secondAttribute="leading" id="l8U-0A-6nw"/>
                             <constraint firstItem="0Vn-KO-6X8" firstAttribute="top" secondItem="kPU-FA-9JC" secondAttribute="bottom" constant="20" id="r4l-pX-SnX"/>
+                            <constraint firstItem="r1i-6c-2Yg" firstAttribute="top" secondItem="rfj-zc-46x" secondAttribute="bottom" constant="39" id="rcH-n7-pdb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ENVIAR MENSAJE" id="V7Q-98-DZc">
@@ -147,13 +190,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descripcionTextField" destination="kPU-FA-9JC" id="DVi-Wy-uZ3"/>
+                        <outlet property="descripcionTextField" destination="kPU-FA-9JC" id="bc6-wQ-g89"/>
                         <outlet property="elegirContactoBoton" destination="0Vn-KO-6X8" id="eAQ-Kf-wl2"/>
+                        <outlet property="grabarButton" destination="FpH-it-L44" id="We5-0B-bp0"/>
                         <outlet property="imageView" destination="axj-eC-f7J" id="nk9-aQ-XXk"/>
+                        <outlet property="nombreTextField" destination="r1i-6c-2Yg" id="ZPG-GE-NCi"/>
+                        <outlet property="reproducirButton" destination="zEp-KB-8nf" id="dlm-kX-7QC"/>
                         <segue destination="D5w-az-goI" kind="show" identifier="seleccionarContactoSegue" id="pNX-fa-pPD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bBu-1x-pSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2513.04347826087" y="96.428571428571431"/>
         </scene>

@@ -8,9 +8,11 @@
 import Foundation
     
 class Snap{
+    var audioURL = ""
     var imagenURL = ""
     var descrip = ""
     var from = ""
     var id  = ""
+    var imagenID = ""
 }
 
